@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: ${JDBC_DATABSAE_PASSWORD:}
+    username: ${JDBC_DATABASE_USERNAME:}
+    url: ${JDBC_DATABSAE_URL:}
+  sql:
+    init:
+      mode: always
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+
+
+
+server:
+  port: ${PORT:8080}
