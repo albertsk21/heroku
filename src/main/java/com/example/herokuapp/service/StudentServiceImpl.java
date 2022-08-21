@@ -27,7 +27,7 @@ public class StudentServiceImpl implements StudentService {
         List<StudentDTO> students = new ArrayList<>();
 
         for (StudentEntity student : studentEntities) {
-            students.add(this.modelMapper.map(studentEntities,StudentDTO.class));
+            students.add(this.modelMapper.map(student,StudentDTO.class));
         }
         return students;
     }

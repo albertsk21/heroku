@@ -13,6 +13,10 @@ public class StudentController {
 
     private StudentService studentService;
 
+    public StudentController(StudentService studentService) {
+        this.studentService = studentService;
+    }
+
     @GetMapping("")
     public ResponseEntity<List<StudentDTO>> getAllStudents(){
         return ResponseEntity.ok(this.studentService.getAll());
